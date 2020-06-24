@@ -66,7 +66,15 @@ var storeFive = new CookieStand('Lima', 2, 16, 4.6);
 storeFive.calcCookiesEachHour();
 storeFive.calcCustomersEachHour();
 
-// var allStores = [storeOne, storeTwo, storeThree, storeFour, storeFive];
+var allShops = [storeOne, storeTwo, storeThree, storeFour, storeFive];
+
+function renderAllShops(){
+  for(var i = 0; i < allShops.length; i++){
+    allShops[i].render();
+  }
+}
+
+renderAllShops();
 
 
 
@@ -272,12 +280,4 @@ storeFive.calcCustomersEachHour();
 //   }
 // };
 
-var allShops = [storeOne, storeTwo, storeThree, storeFour, storeFive];
 
-function renderAllShops(){
-  for(var i = 0; i < allShops.length; i++){
-    allShops[i].render();
-  }
-}
-
-renderAllShops();

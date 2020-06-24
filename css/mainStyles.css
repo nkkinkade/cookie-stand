@@ -11,3 +11,8 @@ li {
 h2 {
     padding: 15px;
 }
+
+table {
+    border: solid 2px black;
+    size: 16px;
+}

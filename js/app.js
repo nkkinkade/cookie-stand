@@ -70,18 +70,18 @@ var storeFive = new CookieStand('Lima', 2, 16, 4.6);
 
 var allShops = [storeOne, storeTwo, storeThree, storeFour, storeFive];
 
-function makeHeaderRow(){
+// function makeHeaderRow(){
 
-}
+// }
 
-function makeFooterRow(){
-  for(){
+// function makeFooterRow(){
+//   for(){
 
-    for(){
-      
-    }
-  }
-}
+//     for(){
+
+//     }
+//   }
+// }
 
 function renderAllData(){
   for(var i = 0; i < allShops.length; i++){

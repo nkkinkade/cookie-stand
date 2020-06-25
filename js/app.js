@@ -60,6 +60,7 @@ Salmon.prototype.render = function() {
   var totalTD = document.createElement('td');
   totalTD.textContent = this.totalCookies;
   newRow.appendChild(totalTD);
+  makeTheFooterRow();
 };
 
 for (var i = 0; i < allStore.length; i++){
@@ -67,8 +68,13 @@ for (var i = 0; i < allStore.length; i++){
 }
 
 function makeTheFooterRow(){
+  var footerTest = document.getElementById('footer-row');
+  if(footerTest){
+    newTable.removeChild(footerTest);
+  }
   console.log('footer function');
   var footerRow = document.createElement('tfoot');
+  footerRow.setAttribute('id', 'footer-row');
   var footerText = document.createElement('th');
   footerText.textContent = 'Total Hourly';
   footerRow.appendChild(footerText);
@@ -110,7 +116,6 @@ function handleFormSubmitted(event){
   allStore.push(newSalmon);
 
   newSalmon.render();
-  newSalmon.getavgCookiesale();
 
   var form = document.getElementById('new-store');
   form.reset();
@@ -119,5 +124,3 @@ function handleFormSubmitted(event){
 var formElement = document.getElementById('new-store');
 
 formElement.addEventListener('submit', handleFormSubmitted);
-
-makeTheFooterRow();

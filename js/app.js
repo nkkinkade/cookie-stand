@@ -51,7 +51,7 @@ Salmon.prototype.render = function() {
   var newRow = document.createElement('tr');
   newRow.textContent = this.name;
   newTable.appendChild(newRow);
- 
+
   for(var i = 0; i < hoursOperation.length; i++) {
     var cookPerTD = document.createElement('td');
     cookPerTD.textContent = this.cookiesPerHour[i];
@@ -63,14 +63,12 @@ Salmon.prototype.render = function() {
 };
 
 for (var i = 0; i < allStore.length; i++){
-  allStore[i].render(); 
+  allStore[i].render();
 }
-
-makeTheFooterRow();
 
 function makeTheFooterRow(){
   console.log('footer function');
-  var footerRow = document.createElement('tr');
+  var footerRow = document.createElement('tfoot');
   var footerText = document.createElement('th');
   footerText.textContent = 'Total Hourly';
   footerRow.appendChild(footerText);
@@ -94,5 +92,32 @@ function makeTheFooterRow(){
   footerRow.appendChild(footerText);
 
   newTable.appendChild(footerRow);
-
 }
+
+function handleFormSubmitted(event){
+
+  event.preventDefault();
+  var nameInput = document.getElementById('name');
+  var nameValue = nameInput['value'];
+  var minCustInput = document.getElementById('minCust');
+  var minCustValue = Number(minCustInput['value']);
+  var maxCustInput = document.getElementById('maxCust');
+  var maxCustValue = Number(maxCustInput.value);
+  var avgCookiesaleInputs = document.getElementById('avgCookiesale');
+  var avgCookiesaleValues = Number(avgCookiesaleInputs.value);
+
+  var newSalmon = new Salmon(nameValue, minCustValue, maxCustValue, avgCookiesaleValues);
+  allStore.push(newSalmon);
+
+  newSalmon.render();
+  newSalmon.getavgCookiesale();
+
+  var form = document.getElementById('new-store');
+  form.reset();
+}
+
+var formElement = document.getElementById('new-store');
+
+formElement.addEventListener('submit', handleFormSubmitted);
+
+makeTheFooterRow();

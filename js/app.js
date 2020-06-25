@@ -49,24 +49,14 @@ CookieStand.prototype.render = function() {
 };
 
 var storeOne = new CookieStand('Seattle', 23, 65, 6.3);
-// storeOne.calcCookiesEachHour();
-// storeOne.calcCustomersEachHour();
 
 var storeTwo = new CookieStand('Tokyo', 3, 24, 1.2);
-// storeTwo.calcCookiesEachHour();
-// storeTwo.calcCustomersEachHour();
 
 var storeThree = new CookieStand('Dubai', 11, 38, 3.7);
-// storeThree.calcCookiesEachHour();
-// storeThree.calcCustomersEachHour();
 
 var storeFour = new CookieStand('Paris', 20, 38, 2.3);
-// storeFour.calcCookiesEachHour();
-// storeFour.calcCustomersEachHour();
 
 var storeFive = new CookieStand('Lima', 2, 16, 4.6);
-// storeFive.calcCookiesEachHour();
-// storeFive.calcCustomersEachHour();
 
 var allShops = [storeOne, storeTwo, storeThree, storeFour, storeFive];
 

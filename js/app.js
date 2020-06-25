@@ -49,13 +49,9 @@ CookieStand.prototype.render = function() {
 };
 
 var storeOne = new CookieStand('Seattle', 23, 65, 6.3);
-
 var storeTwo = new CookieStand('Tokyo', 3, 24, 1.2);
-
 var storeThree = new CookieStand('Dubai', 11, 38, 3.7);
-
 var storeFour = new CookieStand('Paris', 20, 38, 2.3);
-
 var storeFive = new CookieStand('Lima', 2, 16, 4.6);
 
 var allShops = [storeOne, storeTwo, storeThree, storeFour, storeFive];

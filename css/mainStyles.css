@@ -140,10 +140,25 @@ footer {
 table {
     border: solid 4px black;
     size: 16px;
+    margin: auto;
 }
 
 td {
     border: solid 2px black;
     padding: 15px;
+}
+
+th {
+    border: solid 2px black;
+}
+
+thead th {
+    border: solid 2px black;
+    border-bottom: solid 4px black;
+}
+
+thead td {
+    border: solid 2px black;
+    border-bottom: solid 4px black;
 }
 

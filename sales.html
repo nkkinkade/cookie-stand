@@ -19,6 +19,21 @@
                 </ul>
             </nav>
         </header>
+        <form  id="new-store">
+            <fieldset>
+                <legend>Add new cookie stand</legend>
+                <label for="name">Name of new store</label>
+                <input id="name" type="text" required/>
+                <label>Minimum number of customers per hour</label>
+                <input id="minCust" type="number" required/>
+                <label>Maximum number of customers per hour</label>
+                <input id="maxCust" type="number" required/> 
+                <label>Average number of cookies per customer</label>
+                <input id="avgCookiesale" type="number" required/>
+            </fieldset>
+           </form>
+           <button class="sales" type="reset" value="reset">RESET form</button>
+            <button class="sales" type="submit">Click to add new store</button>
         <table id="sales-table">
             <thead>
                 <td>Loacations

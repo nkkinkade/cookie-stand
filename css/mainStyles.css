@@ -7,6 +7,8 @@ a:active {
 
 body {
     background-color: salmon;
+    margin: 0 auto;
+    width: 960px;
 }
 
 header {
@@ -108,11 +110,6 @@ div {
     overflow-y: scroll;
 }
 
-button {
-    height: 50px;
-    font-size: 20px;
-    background-color: cadetblue;
-}
 
 #image {
     width: 480px;
@@ -168,3 +165,14 @@ thead td {
     border-bottom: solid 4px black;
 }
 
+.sales {
+    height: 30px;
+}
+
+ button {
+    height: 50px;
+    font-size: 20px;
+    background-color: cadetblue;
+    text-align: center;
+    margin: 0 auto;
+} 
